@@ -9,6 +9,7 @@ describe('user reducer', () => {
       id: 4,
       name: 'Kevin',
       email: 'kevin@example.com',
+      // ha!
     }
 
     const oldState = {

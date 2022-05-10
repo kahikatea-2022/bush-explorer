@@ -6,6 +6,8 @@ const badges = require('./badges')
 
 // Prevent Jest from timing out (5s often isn't enough)
 jest.setTimeout(10000)
+// Yay for tests! However, correcting for slow tests in this fashion is
+// a bit worrying. Do you have any idea why these are taking so long?
 
 beforeAll(() => {
   return testDb.migrate.latest()

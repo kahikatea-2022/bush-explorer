@@ -1,4 +1,6 @@
 const connection = require('./connection')
+// This set of functions affects both the badges and badge_data DBs,
+// which could get rather confusing.
 
 function getBadges(db = connection) {
   return db('badge_data').select()

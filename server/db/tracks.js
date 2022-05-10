@@ -1,5 +1,7 @@
 const connection = require('./connection')
 
+// This set of functions seems to relate to several DBs, rather than just one...
+
 function addXp(userId, points, db = connection) {
   return db('users').where('id', userId).increment('xp', points)
 }

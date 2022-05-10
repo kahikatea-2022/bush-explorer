@@ -7,6 +7,10 @@ import Registration from './Registration'
 import UserProfile from './user/UserProfile'
 import UserTracks from './user/UserTracks'
 import UserBadges from './user/UserBadges'
+// If you really wanted to go wild in tidying this up, you could import
+// all the 'user' components to a single file in the components directory
+// and export them from there. Then here, your import could look like:
+// import { UserProfile, UserTracks, UserBadges } from './user'
 import Track from './track/Track'
 import Tracks from './tracks/TracksList'
 import Nav from './nav/Nav'

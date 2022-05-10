@@ -1,6 +1,7 @@
 import { WEATHER_API_KEY } from '../../weatherKey'
 const lat = '-36.212791'
 const lon = '175.402013'
+// I'm assuming these hard-coded values are placeholders?
 const todayUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${WEATHER_API_KEY}`
 const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast/?lat=${lat}&lon=${lon}&units=metric&appid=${WEATHER_API_KEY}`
 

@@ -15,6 +15,7 @@ router.get('/userTracks/:userId', (req, res) => {
     .then((tracks) => {
       const parsedTracks = tracks.map((track) => {
         const lineArray = JSON.parse(track.line) // convert array from string to arrays (beware of trailing commas)
+        // Ha! Love this comment.
         return { ...track, line: lineArray }
       })
       res.json(parsedTracks)
@@ -106,9 +107,8 @@ router.patch('/hiked', (req, res) => {
 router.patch('/completed', (req, res) => {
   const { userId, trackId, points } = req.body
   const current = new Date()
-  const lastCompletion = `${
-    current.getMonth() + 1
-  }/${current.getDate()}/${current.getFullYear()}`
+  const lastCompletion = `${current.getMonth() + 1
+    }/${current.getDate()}/${current.getFullYear()}`
 
   const completedTrack = {
     userId,
@@ -188,6 +188,7 @@ router.get('/', (req, res) => {
 
 // Get completed tracks by user ID
 router.get('/completed/:userId', (req, res) => {
+  // Is there a consistent way you've decided when to pass IDs in the body vs params?
   const userId = Number(req.params.userId)
   db.getCompletedTrackByUser(userId)
     .then((tracks) => {

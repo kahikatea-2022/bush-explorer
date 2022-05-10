@@ -4,6 +4,9 @@ function generateUserTrackData(userId) {
   // [{user_id: 3, track_id: 1, ...}, {user_id: 3, track_id: 2, ...}, {user_id: 3, track_id: 3, ...}]
   // then if the user completes track 2 we can find the row fo user_id = 3 and track_id = 2 and set completed to 1 (true)
   const amountOfTracks = 20
+  // Hmm, agree with Ahmad that potentially squillions of unused rows in
+  // the DB for each user/track combination is not ideal. But can you
+  // explain this limit?
 
   const userTracks = []
 

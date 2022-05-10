@@ -1,5 +1,7 @@
 import requestor from '../../consume'
 
+// Why would this functionality not be in apis/users ?
+
 export function getUser(id, consume = requestor) {
   return consume(`/users/${id}`)
     .then((res) => {

@@ -29,6 +29,8 @@ router.get('/:userId', async (req, res) => {
 })
 
 //
+// Not sure I'd expect a post to /badges to create a user-badge relationship
+// Maybe the path should include one or both of the IDs, for clarity?
 router.post('/', (req, res) => {
   const { userId, badgeId } = req.body
 

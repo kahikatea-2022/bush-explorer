@@ -1,5 +1,6 @@
 export function getUserLat() {
   navigator.geolocation.getCurrentPosition(function (position) {
+    // Very nice use of the geo APIs!
     const lat = position.coords.latitude
     return lat
   })
